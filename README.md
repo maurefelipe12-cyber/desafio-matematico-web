@@ -149,21 +149,3 @@ proyecto/
 4. Observar los resultados generados dinámicamente.
 
 ---
-
-# Enlaces
-
-## Repositorio GitHub
-
-Pegar aquí el enlace del repositorio.
-
----
-
-## Página publicada
-
-Pegar aquí el enlace de GitHub Pages.
-
----
-
-# Autor
-
-Felipe Maure
