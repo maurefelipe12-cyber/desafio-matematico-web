@@ -13,7 +13,8 @@
       <span class="badge">Desafío Web</span>
       <h1>Matemáticas que resuelven problemas</h1>
       <p>
-        Simuladores interactivos usando Fibonacci y números primos aplicados a situaciones reales.
+        Simuladores interactivos usando Fibonacci y números primos aplicados
+        a situaciones reales.
       </p>
       <p class="autor">Desarrollado por: Felipe Maure</p>
     </div>
@@ -24,10 +25,10 @@
     <section class="intro card">
       <h2>Contexto del proyecto</h2>
       <p>
-        En la vida diaria y en la informática, los patrones matemáticos ayudan a analizar problemas,
-        organizar información y tomar mejores decisiones. En esta página se aplican dos ideas:
-        la serie de Fibonacci para estimar la carga de tareas académicas y los números primos para
-        verificar códigos numéricos con mayor seguridad.
+        La matemática y la programación permiten analizar problemas reales de manera lógica.
+        En esta página se aplican la serie de Fibonacci y los números primos para resolver
+        situaciones relacionadas con organización académica, seguridad informática y análisis
+        de patrones especiales.
       </p>
     </section>
 
@@ -35,23 +36,32 @@
       <div class="texto">
         <span class="numero-seccion">01</span>
         <h2>Organizador de tareas con Fibonacci</h2>
+
         <p>
-          Este simulador ayuda a estimar la carga de una tarea académica. El usuario ingresa las horas
-          estimadas y un nivel de complejidad. Luego, JavaScript genera la serie de Fibonacci y usa el
-          valor correspondiente como puntaje de dificultad.
+          Este simulador aplica la serie de Fibonacci para organizar tareas académicas según
+          su dificultad. En la vida real, una tarea difícil no solo toma más tiempo, también
+          puede requerir más concentración, organización y esfuerzo.
+        </p>
+
+        <p>
+          Por eso se utiliza Fibonacci como escala de crecimiento de dificultad. El usuario
+          ingresa las horas estimadas y un nivel de complejidad del 1 al 8. Luego, JavaScript
+          genera el valor Fibonacci correspondiente y calcula la carga académica total.
         </p>
 
         <div class="algoritmo">
           <h3>¿Cómo se aplica Fibonacci?</h3>
-          <p>
-            La dificultad no crece de forma lineal. Una tarea compleja puede requerir mucho más esfuerzo
-            que una simple. Por eso se usa Fibonacci:
-          </p>
+          <p>La serie utilizada es:</p>
           <p class="formula">0, 1, 1, 2, 3, 5, 8, 13, 21...</p>
           <p>
-            La carga final se calcula así:
+            Si una tarea tiene complejidad 6, el programa calcula Fibonacci(6),
+            que equivale a 8.
           </p>
           <p class="formula">Carga = horas estimadas × Fibonacci(complejidad)</p>
+          <p>
+            Con ese resultado, el sistema clasifica la prioridad de la tarea
+            como baja, media, alta o crítica.
+          </p>
         </div>
       </div>
 
@@ -78,36 +88,109 @@
     <section class="simulador card">
       <div class="texto">
         <span class="numero-seccion">02</span>
-        <h2>Verificador de código seguro con números primos</h2>
+        <h2>Cifrador de mensajes con números primos</h2>
+
         <p>
-          Este simulador verifica si un código numérico puede considerarse más seguro usando números
-          primos. Los números primos son importantes en informática porque se usan en conceptos de
-          seguridad, cifrado y protección de información.
+          Este simulador protege un mensaje usando un código numérico primo como clave.
+          Los números primos son importantes en informática porque se relacionan con
+          seguridad digital, cifrado y protección de información.
         </p>
 
         <div class="algoritmo">
-          <h3>¿Cómo se aplica un número primo?</h3>
+          <h3>¿Cómo se aplican los números primos?</h3>
+
           <p>
-            Un número primo es aquel que solo puede dividirse exactamente entre 1 y entre sí mismo.
-            El programa prueba sus divisores y determina si el código ingresado cumple esa condición.
+            Primero, el sistema verifica si el código ingresado es primo. Si lo es,
+            se usa como clave para cifrar el mensaje mediante desplazamiento de letras.
           </p>
-          <p class="formula">Ejemplo: 67 es primo porque solo se divide entre 1 y 67.</p>
+
+          <p class="formula">Mensaje + clave prima = mensaje cifrado</p>
+
+          <p>
+            Si el código no es primo, el sistema no cifra el mensaje porque la clave
+            no cumple la condición de seguridad básica.
+          </p>
         </div>
       </div>
 
       <form class="formulario" id="formPrimos">
-        <h3>Simulador de código seguro</h3>
+        <h3>Simulador de cifrado básico</h3>
 
-        <label for="codigoPrimo">Ingrese un código numérico</label>
-        <input type="number" id="codigoPrimo" placeholder="Ej: 67" min="1" required>
+        <label for="mensajeSecreto">Mensaje a proteger</label>
+        <input type="text" id="mensajeSecreto" placeholder="Ej: hola mundo" required>
 
-        <button type="button" onclick="verificarCodigo()">Verificar código</button>
+        <label for="codigoPrimo">Código numérico primo</label>
+        <input type="number" id="codigoPrimo" placeholder="Ej: 7" min="2" required>
+
+        <button type="button" onclick="verificarCodigo()">Cifrar mensaje</button>
 
         <div class="resultado" id="resultadoPrimo">
-          Aquí aparecerá el análisis del código.
+          Aquí aparecerá el mensaje cifrado.
         </div>
       </form>
     </section>
+
+    <section class="simulador card">
+      <div class="texto">
+        <span class="numero-seccion">03</span>
+        <h2>Detector de Fibonacci primos</h2>
+
+        <p>
+          Este simulador combina Fibonacci y números primos para detectar patrones numéricos
+          especiales. Primero se genera una secuencia Fibonacci y luego el programa analiza
+          cuáles de esos valores también son números primos.
+        </p>
+
+        <p>
+          Los números que cumplen ambas condiciones son poco comunes y pueden utilizarse
+          para análisis matemático, patrones computacionales e identificadores especiales.
+        </p>
+
+        <div class="algoritmo">
+          <h3>¿Cómo funciona el algoritmo combinado?</h3>
+
+          <p>El programa primero genera la secuencia Fibonacci:</p>
+          <p class="formula">0, 1, 1, 2, 3, 5, 8, 13, 21...</p>
+
+          <p>
+            Después analiza cada número para verificar si también cumple
+            la condición de número primo.
+          </p>
+
+          <p class="formula">Fibonacci + Primo = número especial</p>
+
+          <p>
+            Finalmente, el sistema muestra los valores Fibonacci que también
+            son primos.
+          </p>
+        </div>
+      </div>
+
+      <form class="formulario" id="formFibonacciPrimo">
+        <h3>Simulador combinado</h3>
+
+        <label for="terminosFibonacci">Cantidad de términos Fibonacci</label>
+        <input type="number" id="terminosFibonacci" placeholder="Ej: 10" min="3" max="30" required>
+
+        <button type="button" onclick="detectarFibonacciPrimos()">
+          Detectar Fibonacci primos
+        </button>
+
+        <div class="resultado" id="resultadoFibonacciPrimo">
+          Aquí aparecerán los números Fibonacci que también son primos.
+        </div>
+      </form>
+    </section>
+
+    <section class="conclusion card">
+      <h2>Conclusión</h2>
+      <p>
+        Fibonacci y los números primos permiten resolver y analizar problemas reales.
+        La matemática ayuda a organizar información, representar crecimiento, identificar
+        patrones especiales y mejorar el análisis lógico dentro de la informática.
+      </p>
+    </section>
+
 
   </main>
 
@@ -116,5 +199,6 @@
   </footer>
 
   <script src="scripts/script.js"></script>
+
 </body>
 </html>
